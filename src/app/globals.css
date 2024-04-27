@@ -105,3 +105,295 @@ a {
     color-scheme: dark;
   }
 }
+/* Home page css */
+
+.navbaar {
+  display: flex;
+  justify-content: right;
+  color: red;
+  gap: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+}
+.home-icon {
+  font-size: 35px;
+}
+.content-div {
+  position: fixed;
+  z-index: 0;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.content-div1 {
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.options:hover {
+  color: red;
+  border-bottom: 4px solid red;
+}
+.intro-div {
+  background-image: url(../../public/personal.png);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: right; /* Sets the background image to the right and vertically centered */
+  background-size: contain;
+  z-index: -1;
+  padding-top: 4rem;
+  padding-left: 3rem;
+  font-size: 3rem;
+  color: red;
+  font-weight: bolder;
+}
+.white {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.top-border {
+  border-top: 3px solid #f87171;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding-bottom: 3rem;
+}
+.border {
+  font-weight: lighter;
+  border: 2px solid red;
+  width: 120px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: red;
+  background-color: #1d1d1d;
+}
+.border:hover {
+  background-color: red;
+  color: black;
+}
+@media screen and (max-width: 450px) {
+  .home-main {
+    background-size: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content-div {
+    font-size: 2.5rem;
+  }
+  .content-div1 {
+    font-size: 2.5rem;
+  }
+  .work-main {
+    display: flex;
+  }
+  .work-main2 {
+    flex-direction: row-reverse;
+  }
+  .work-img-div {
+    width: 50%;
+    overflow: visible;
+  }
+
+  .desc-project {
+    width: 50%;
+  }
+  .form-main2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .about-main {
+    display: flex;
+  }
+  .about-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-content {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+    padding-top: 8rem !important;
+  }
+  .about-para {
+    font-size: 1.2rem;
+  }
+}
+/* Work screen css */
+.Work-top-main {
+}
+.sliding-image {
+  width: 100%;
+  height: 400vh;
+  transition: transform 2s ease; /* Smooth transition for the transform property */
+}
+
+.sliding-image:hover {
+  transition: transform 20s ease;
+  transform: translateY(
+    -300vh
+  ); /* Adjust the value based on your image height */
+}
+
+.sliding-image:hover::after {
+  content: "";
+  animation: slideBackAnimation 2s linear infinite; /* Adjust the duration as needed */
+}
+
+.work-img-div {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.hover {
+  position: absolute;
+  bottom: -50px;
+  left: 35%;
+  width: 30%;
+  height: 150px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+}
+
+.desc-project {
+  height: 100vh;
+  background-color: #1d1d1d;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+/* Contact section */
+.contact-main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #0f182c;
+}
+.form {
+  padding-top: 0px;
+}
+.form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: red;
+}
+.custom-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.875rem;
+  color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.custom-button {
+  display: inline-block;
+  padding: 0.625rem 0.875rem; /* Equivalent to px-3.5 py-2.5 */
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  font-weight: 600; /* Equivalent to font-semibold */
+  line-height: 1.25rem; /* Adjusted line height */
+  color: #fff; /* Equivalent to text-white */
+  background-color: #4f46e5; /* Equivalent to bg-indigo-500 */
+  border-radius: 0.375rem; /* Equivalent to rounded-md */
+  border: none; /* Equivalent to border-0 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Equivalent to shadow-sm */
+}
+.button {
+  display: flex;
+  justify-content: right;
+}
+.custom-button:hover {
+  background-color: #4338ca; /* Equivalent to hover:bg-indigo-400 */
+}
+
+.custom-button:focus-visible {
+  outline: 2px solid transparent; /* Equivalent to focus-visible:outline */
+  outline-offset: 2px; /* Equivalent to focus-visible:outline-offset-2 */
+}
+
+.custom-button:focus-visible::focus-visible {
+  outline: 2px solid #4f46e5; /* Equivalent to focus-visible:outline-indigo-500 */
+}
+/* about section */
+.about-pic {
+  padding-top: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.pic {
+  height: 85vh;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-top: 4rem;
+}
+.heading {
+  color: red;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.about-para {
+  font-weight: 300;
+  color: #e5e7eb;
+  font-size: 12px;
+}
+.about-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+.red {
+  color: red;
+}
