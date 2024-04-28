@@ -26,7 +26,7 @@ const Work = () => {
         title="Nick Roffies"
         description="Project Statement: Nick Roffeis is from Austria and advertising design student in Berlin.Overview: This website is developed with HTML5, CSS3 and for animations I have used JQuery."
         web="https://sleepy-curie-1851c9.netlify.app/"
-        img="/NickRoffies.png"
+        img="/NickRoffeis.png"
       />
       <Worksection
         title="Bodega"
