@@ -118,19 +118,21 @@ const Main = () => {
         >
           Mern Stack Developer
         </motion.div>
-        <motion.div
-          initial="hidden"
-          ref={ref}
-          animate={controls}
-          transition={{ type: "spring", duration: 1, delay: 1.5 }}
-          variants={{
-            hidden: { y: 100, opacity: 0 },
-            visible: { y: 0, opacity: 1 },
-          }}
-          className=" border"
-        >
-          Work
-        </motion.div>
+        <a href="/Work">
+          <motion.div
+            initial="hidden"
+            ref={ref}
+            animate={controls}
+            transition={{ type: "spring", duration: 1, delay: 1.5 }}
+            variants={{
+              hidden: { y: 100, opacity: 0 },
+              visible: { y: 0, opacity: 1 },
+            }}
+            className=" border"
+          >
+            Work
+          </motion.div>
+        </a>
       </div>
     </section>
   );

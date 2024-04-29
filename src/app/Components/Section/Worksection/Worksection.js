@@ -4,7 +4,6 @@ import { motion, useAnimation } from "framer-motion";
 const Worksection = ({ img, title, description, web, workclass }) => {
   const controls = useAnimation();
   const ref = React.useRef();
-
   return (
     <div className={`work-main ${workclass}`}>
       <div className="work-img-div">
@@ -14,9 +13,9 @@ const Worksection = ({ img, title, description, web, workclass }) => {
       <div className="desc-project">
         <h2 className="text-4xl font-bold text-left">{title}</h2>
         <p className="text-2xl text-left">{description}</p>
-        <button className="border">
-          <a href={web}></a> Visit Website
-        </button>
+        <a href={web}>
+          <button className="border">Visit Website</button>
+        </a>
       </div>
     </div>
   );
